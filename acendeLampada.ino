@@ -2,10 +2,10 @@
 #include <PubSubClient.h> //Importa biblioteca MQTT
 
 
-#define SSID_REDE     "NEOQEAVDLV"  //coloque aqui o nome da rede que se deseja conectar
-#define SENHA_REDE    "()casa2014"  //coloque aqui a senha da rede que se deseja conectar
+#define SSID_REDE     "saeg"  //coloque aqui o nome da rede que se deseja conectar
+#define SENHA_REDE    "semsenha"  //coloque aqui a senha da rede que se deseja conectar
 
-#define ID_MQTT "quarto"
+#define ID_MQTT "quartoProfessor"
 #define MQTT_SERVER "iot2017.nc2.iff.edu.br"
 #define MQTT_USER   "saeg2017"
 #define MQTT_PASS   "semsenha"
@@ -184,6 +184,7 @@ void setup() {
 void loop() {
  if (WiFi.status() == WL_CONNECTED){
       if (!clienteMQTT.connected()) {
+        Serial.println("XXXXXXXXXXXXXXX");
         connectaClienteMQTT();
       }
      
